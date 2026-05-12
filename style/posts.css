@@ -1,0 +1,246 @@
+#mobile-header {
+    display: none;
+}
+
+#comments {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    margin-top: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.comment {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.comment-meta {
+    justify-self: end;
+    text-align: right;
+    font-family: "Alegreya Sans SC";
+}
+
+.comment-text {
+    font-style: italic;
+}
+
+.comment-nick::after {
+    content: " ⋅ ";
+}
+
+.comment-date {
+    font-style: italic;
+}
+
+#post-footer {
+    margin-top: 4rem;
+    padding-top: 0rem;
+
+    font-style: italic;
+}
+
+#post-title {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Alegreya Sans SC";
+    margin: 0 0 5rem 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "blog-title post-title"
+        "toc        post-main";
+    column-gap: 4rem;
+    margin: 10vh 17vw 10vh 9vw;
+    font-size: calc(18px + 0.39vw);
+}
+
+#blog-title {
+    grid-area: blog-title;
+    justify-self: end;
+    font-family: "Alegreya Sans SC";
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#post-title {
+    grid-area: post-title;
+}
+
+#toc {
+    grid-area: toc;
+    justify-self: end;
+    text-align: right;
+    position: sticky;
+    top: 10vh;
+    align-self: start;
+    counter-reset: toc-section;
+}
+
+#toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#toc li {
+    margin: 0;
+}
+
+#toc li::before {
+    counter-increment: toc-section;
+    content: counter(toc-section) ". ";
+    font-variant-numeric: lining-nums;
+    font-style: normal;
+}
+
+#toc-header {
+    display: block;
+    text-align: right;
+}
+
+.hang {
+    margin-right: -0.2em;
+}
+
+#post-main {
+    grid-area: post-main;
+    margin-top: 0;
+    padding-top: 0;
+    counter-reset: section subsection;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+ol, ul {
+    list-style-position: outside;
+    padding-left: 1.5em;
+    margin-left: -1.5em;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2em;
+    row-gap: 0.2em;
+}
+
+dt {
+    font-style: italic;
+}
+
+dd {
+    margin: 0;
+}
+
+@media (max-width: 50rem) {
+    body {
+        display: block;
+        margin: 2rem 5vw 2rem 8vw;
+        overflow-x: hidden;
+    }
+    #mobile-header {
+        display: block;
+        font-family: "Alegreya Sans SC";
+        color: inherit;
+        margin-bottom: 2rem;
+    }
+    #blog-title, #post-title, #toc { display: none; }
+    pre { overflow-x: auto; }
+    dl {
+        display: block;
+    }
+    dt {
+        margin-top: 1rem;
+    }
+    dd {
+        margin-left: 0;
+    }
+    .comment-meta {
+        justify-self: start;
+        text-align: left;
+    }
+}
+
+pre, code {
+    font-size: .9em;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h1, h2 {
+    font-family: "Alegreya Sans SC";
+    font-variant-numeric: lining-nums;
+}
+
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h3, h4, h5 {
+    display: inline;
+    margin: 0 1em 0 0;
+}
+
+#post-main h2::before {
+    counter-increment: section;
+    counter-reset: subsection;
+    content: counter(section);
+    display: inline-block;
+    width: 1.5em;
+    text-align: right;
+    margin-left: -2em;
+    padding-right: 0.5em;
+    font-weight: bold;
+}
+
+#post-main h3::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection);
+    display: inline-block;
+    width: 1.5em;
+    text-align: right;
+    margin-left: -2em;
+    padding-right: 0.5em;
+    font-weight: bold;
+}
+
+h3 + p, h4 + p, h5 + p {
+    display: inline;
+}
+
+#post-title {
+}
+
+#article {
+}
+
+#date {
+    text-align: right;
+    position: absolute;
+    float: left;
+    transform: translateX(-5em);
+}
+
+#footer {
+    margin-top: 1.2rem;
+    font-style: italic;
+}
+
+.subheading {
+    font-family: "Alegreya Sans SC";
+    margin-bottom: 1.2em; /* 2line-height */
+    margin-top: 1.2em; /* 2line-height */
+}

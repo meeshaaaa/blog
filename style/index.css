@@ -1,0 +1,90 @@
+body {
+    padding: 10vh 13vw 10vh 25vw;
+    margin: 0;
+    gap: 0;
+    font-size: calc(24px + 0.39vw);
+}
+
+/*
+.post {
+    display: flex;
+}
+
+.date {
+    flex: 15%;
+    text-align: right;
+    transform: translateX(-1rem);
+}
+
+.post-description {
+    width: 20em;
+}
+*/
+
+.post {
+    display: flex;
+    margin-bottom: 1.2rem;
+    margin-left: -6em;
+}
+
+.date {
+    flex: 0 0 5em;
+    text-align: right;
+    margin-right: 1em;
+}
+
+.post-description {
+    text-wrap: pretty;
+}
+
+#description {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    hyphens: auto;
+    font-style: italic;
+}
+
+.row-border {
+    border-top: 1px solid black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    grid-column: 1 / 15;
+}
+
+#title {
+    font-family: "Alegreya Sans SC";
+}
+
+#title h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 40rem) {
+    body { padding: 4rem 5vw; font-size: 20px; }
+    section { padding-top: 1.2rem; }
+    .post {
+        display: block;
+        margin-left: 0;
+    }
+    .date {
+        text-align: left;
+        font-size: 0.8em;
+        opacity: 0.6;
+        margin: 0 0 0.1em 0;
+    }
+}

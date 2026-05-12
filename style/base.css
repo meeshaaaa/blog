@@ -1,0 +1,48 @@
+:root {
+    --white: #e6e6e6;
+    --accent: #2a1ad0;
+    background-color: var(--white);
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.sc {
+    font-family: "Alegreya Sans SC";
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5 {
+    text-wrap: balance;
+}
+
+.skip-link {
+    position: absolute;
+    top: -10em;
+    left: 1rem;
+    padding: 0.5em 1em;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--white);
+}
