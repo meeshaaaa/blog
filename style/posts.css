@@ -145,6 +145,7 @@ dd {
         display: block;
         margin: 2rem 5vw 2rem 8vw;
         overflow-x: hidden;
+        font-size: 22px;
     }
     #mobile-header {
         display: block;

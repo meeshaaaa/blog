@@ -75,7 +75,7 @@ body {
 }
 
 @media (max-width: 40rem) {
-    body { padding: 4rem 5vw; font-size: 20px; }
+    body { padding: 4rem 5vw; font-size: 22px; }
     section { padding-top: 1.2rem; }
     .post {
         display: block;
