@@ -27,7 +27,7 @@
 }
 
 .comment-nick::after {
-    content: " ⋅ ";
+    content: " · ";
 }
 
 .comment-date {
