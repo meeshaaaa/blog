@@ -3,6 +3,7 @@ body {
     margin: 0;
     gap: 0;
     font-size: calc(24px + 0.39vw);
+    max-width: 40rem;
 }
 
 /*
